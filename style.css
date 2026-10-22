@@ -131,10 +131,10 @@ figcaption {
 .trio {
   display: grid;
   gap: clamp(1.75rem, 4vw, 2.75rem);
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   padding: clamp(2.5rem, 6vw, 4.5rem) 0;
 }
-.trio img { aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; }
+.trio img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; }
 .trio h3 {
   font-family: var(--titre);
   font-weight: 600;
@@ -147,11 +147,11 @@ figcaption {
 
 .quatuor {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.5rem;
   padding: clamp(2rem, 5vw, 3.5rem) 0 0;
 }
-.quatuor img { aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; }
+.quatuor img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; }
 .quatuor figcaption { padding-top: 0.4rem; }
 
 /* Sections */
@@ -268,6 +268,6 @@ figcaption {
 .page-texte p { margin: 0 0 0.75rem; }
 
 @media (min-width: 48rem) {
-  .trio { grid-template-columns: repeat(3, 1fr); }
-  .quatuor { grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+  .trio { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .quatuor { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.75rem; }
 }
