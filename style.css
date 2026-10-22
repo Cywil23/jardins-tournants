@@ -56,7 +56,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 
 a { color: inherit; text-decoration-color: var(--paille); text-underline-offset: 0.2em; text-decoration-thickness: 2px; }
 a:hover { text-decoration-color: var(--vert); }
